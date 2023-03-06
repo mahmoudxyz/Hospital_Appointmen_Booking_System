@@ -1,0 +1,776 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="AppointmentBookingToDoctorRestServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-03-06T01:48:53" hostname="192.168.1.7" time="26.495">
+  <properties/>
+  <testcase name="start" classname="AppointmentBookingToDoctorRestServiceTest" time="26.495"/>
+  <system-out><![CDATA[?[1;31m
+Start test 1?[0m
+?[0;34m
+?[0m?[0;34m  .   ____          _            __ _ _
+?[0m?[0;34m /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+?[0m?[0;34m( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+?[0m?[0;34m \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+?[0m?[0;34m  '  |____| .__|_| |_|_| |_\__, | / / / /
+?[0m?[0;34m =========|_|==============|___/=/_/_/_/
+?[0m?[0;34m :: Spring Boot ::                (v2.5.6)
+?[0m?[0;34m
+?[0m?[0;34m2023-03-05 20:48:54.548  INFO 37195 --- [    Test worker] rest.Main                                : Starting Main using Java 17.0.5 on 192.168.1.7 with PID 37195 (started by mahmoudxyz in /home/mahmoudxyz/IdeaProjects/Hospital Appointment Booking System/Hospital Appointment Booking System/task)
+?[0m?[0;34m2023-03-05 20:48:54.550  INFO 37195 --- [    Test worker] rest.Main                                : No active profile set, falling back to default profiles: default
+?[0m?[0;34m2023-03-05 20:48:55.376  INFO 37195 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+?[0m?[0;34m2023-03-05 20:48:55.413  INFO 37195 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 2 JPA repository interfaces.
+?[0m?[0;34m2023-03-05 20:48:55.822  INFO 37195 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 28852 (http)
+?[0m?[0;34m2023-03-05 20:48:55.830  INFO 37195 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+?[0m?[0;34m2023-03-05 20:48:55.831  INFO 37195 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+?[0m?[0;34m2023-03-05 20:48:55.885  INFO 37195 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+?[0m?[0;34m2023-03-05 20:48:55.885  INFO 37195 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1294 ms
+?[0m?[0;34m2023-03-05 20:48:55.987  INFO 37195 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+?[0m?[0;34m2023-03-05 20:48:56.101  INFO 37195 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+?[0m?[0;34m2023-03-05 20:48:56.106  INFO 37195 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:../d'
+?[0m?[0;34m2023-03-05 20:48:56.230  INFO 37195 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+?[0m?[0;34m2023-03-05 20:48:56.269  INFO 37195 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+?[0m?[0;34m2023-03-05 20:48:56.347  INFO 37195 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+?[0m?[0;34m2023-03-05 20:48:56.415  INFO 37195 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+?[0m?[0;34m2023-03-05 20:48:56.796  INFO 37195 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+?[0m?[0;34m2023-03-05 20:48:56.805  INFO 37195 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+?[0m?[0;34m2023-03-05 20:48:57.171  WARN 37195 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+?[0m?[0;34m2023-03-05 20:48:57.527  INFO 37195 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+?[0m?[0;34m2023-03-05 20:48:57.557  INFO 37195 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 28852 (http) with context path ''
+?[0m?[0;34m2023-03-05 20:48:57.567  INFO 37195 --- [    Test worker] rest.Main                                : Started Main in 3.301 seconds (JVM running for 4.032)
+?[0;34m2023-03-05 20:48:57.817  INFO 37195 --- [io-28852-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+?[0m?[0;34m2023-03-05 20:48:57.817  INFO 37195 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+?[0m?[0;34m2023-03-05 20:48:57.818  INFO 37195 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+?[0m?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[0m?[0;34m
+?[0m?[1;31m
+Start test 2?[0m
+?[0;34mHibernate: select appointmen0_.id_app as id_app1_0_, appointmen0_.date as date2_0_, appointmen0_.doctor as doctor3_0_, appointmen0_.patient as patient4_0_ from appointment appointmen0_
+?[0;34m
+?[0m?[1;31m
+Start test 3?[0m
+?[1;31m
+Start test 4?[0m
+?[1;31m
+Start test 5?[0m
+?[1;31m
+Start test 6?[0m
+?[1;31m
+Start test 7?[0m
+?[1;31m
+Start test 8?[0m
+?[1;31m
+Start test 9?[0m
+?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[0;34m
+?[0m?[1;31m
+Start test 10?[0m
+?[0m?[0;34mHibernate: select appointmen0_.id_app as id_app1_0_, appointmen0_.date as date2_0_, appointmen0_.doctor as doctor3_0_, appointmen0_.patient as patient4_0_ from appointment appointmen0_
+?[0;34m
+?[0m?[1;31m
+Start test 11?[0m
+?[0m?[0;34mHibernate: select appointmen0_.id_app as id_app1_0_, appointmen0_.date as date2_0_, appointmen0_.doctor as doctor3_0_, appointmen0_.patient as patient4_0_ from appointment appointmen0_
+?[0;34m
+?[0m?[1;31m
+Start test 12?[0m
+?[0;34mHibernate: select appointmen0_.id_app as id_app1_0_, appointmen0_.date as date2_0_, appointmen0_.doctor as doctor3_0_, appointmen0_.patient as patient4_0_ from appointment appointmen0_
+?[0;34m
+?[0m?[1;31m
+Start test 13?[0m
+?[1;31m
+Start test 14?[0m
+?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[1;31m
+Start test 15?[0m
+?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[0m?[0;34mHibernate: call next value for hibernate_sequence
+?[0m?[0;34mHibernate: insert into doctor (doctor_name, id) values (?, ?)
+?[0;34m{"id":1,"doctorName":"lea wong"}
+?[0m?[1;31m
+Start test 16?[0m
+?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[1;31m
+Start test 17?[0m
+?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[0m?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[0;34m[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}]
+?[0m?[0;34mavailabletime
+?[0m?[0;34mbooked
+?[0m?[0;34mavailabletime
+?[0m?[0;34mbooked
+?[0m?[0;34mavailabletime
+?[0m?[0;34mbooked
+?[0m?[0;34mavailabletime
+?[0m?[0;34mbooked
+?[0m?[0;34m[lea wong=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}]]
+?[0m?[0;34m[{"id":1,"doctorName":"lea wong"}]
+?[0m?[1;31m
+Start test 18?[0m
+?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[0m?[0;34m2023-03-05 20:48:58.255  WARN 37195 --- [io-28852-exec-9] unknown.jul.logger                       : [Doctor(id=1, doctorName=lea wong)]
+?[0m?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[0m?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[0;34m[{"id":1,"doctorName":"lea wong"}]
+?[0m?[0;34m[{"id":1,"doctorName":"lea wong"}]
+?[0m?[1;31m
+Start test 19?[0m
+?[1;31m
+Start test 20?[0m
+?[1;31m
+Start test 21?[0m
+?[1;31m
+Start test 22?[0m
+?[1;31m
+Start test 23?[0m
+?[1;31m
+Start test 24?[0m
+?[0m?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[0m?[0;34m2023-03-05 20:48:58.303  WARN 37195 --- [io-28852-exec-5] unknown.jul.logger                       : Lea Wong
+?[0m?[0;34m2023-03-05 20:48:58.304  WARN 37195 --- [io-28852-exec-5] unknown.jul.logger                       : lea wong
+?[0m?[0;34mHibernate: select doctor0_.id as col_0_0_ from doctor doctor0_ where doctor0_.doctor_name=? limit ?
+?[0m?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_ where doctor0_.doctor_name=?
+?[0m?[0;34mHibernate: update doctor set doctor_name=? where doctor_name=?
+?[0m?[0;34mHibernate: update appointment set doctor=? where lower(doctor)=lower(?)
+?[0m?[0;34mHibernate: select appointmen0_.id_app as id_app1_0_, appointmen0_.date as date2_0_, appointmen0_.doctor as doctor3_0_, appointmen0_.patient as patient4_0_ from appointment appointmen0_
+?[0m?[0;34m2023-03-05 20:48:58.339  WARN 37195 --- [io-28852-exec-5] unknown.jul.logger                       : []
+?[1;31m
+Start test 25?[0m
+?[0;34m2023-03-05 20:48:58.874  INFO 37195 --- [       Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+?[0m?[0;34m2023-03-05 20:48:58.877  INFO 37195 --- [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+?[0m?[0;34m2023-03-05 20:48:58.899  INFO 37195 --- [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+?[0;34m
+?[0m?[0;34m  .   ____          _            __ _ _
+?[0m?[0;34m /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+?[0m?[0;34m( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+?[0m?[0;34m \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+?[0m?[0;34m  '  |____| .__|_| |_|_| |_\__, | / / / /
+?[0m?[0;34m =========|_|==============|___/=/_/_/_/
+?[0m?[0;34m :: Spring Boot ::                (v2.5.6)
+?[0m?[0;34m
+?[0m?[0;34m2023-03-05 20:49:08.403  INFO 37195 --- [    Test worker] rest.Main                                : Starting Main using Java 17.0.5 on 192.168.1.7 with PID 37195 (started by mahmoudxyz in /home/mahmoudxyz/IdeaProjects/Hospital Appointment Booking System/Hospital Appointment Booking System/task)
+?[0m?[0;34m2023-03-05 20:49:08.403  INFO 37195 --- [    Test worker] rest.Main                                : No active profile set, falling back to default profiles: default
+?[0m?[0;34m2023-03-05 20:49:08.594  INFO 37195 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+?[0m?[0;34m2023-03-05 20:49:08.598  INFO 37195 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 2 JPA repository interfaces.
+?[0m?[0;34m2023-03-05 20:49:08.661  INFO 37195 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 28852 (http)
+?[0m?[0;34m2023-03-05 20:49:08.662  INFO 37195 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+?[0m?[0;34m2023-03-05 20:49:08.662  INFO 37195 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+?[0m?[0;34m2023-03-05 20:49:08.682  INFO 37195 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+?[0m?[0;34m2023-03-05 20:49:08.682  INFO 37195 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 277 ms
+?[0m?[0;34m2023-03-05 20:49:08.710  INFO 37195 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+?[0m?[0;34m2023-03-05 20:49:08.714  INFO 37195 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+?[0m?[0;34m2023-03-05 20:49:08.714  INFO 37195 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:../d'
+?[0m?[0;34m2023-03-05 20:49:08.758  INFO 37195 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+?[0m?[0;34m2023-03-05 20:49:08.762  INFO 37195 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+?[0m?[0;34m2023-03-05 20:49:08.795  INFO 37195 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+?[0m?[0;34m2023-03-05 20:49:08.795  INFO 37195 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+?[0m?[0;34m2023-03-05 20:49:08.869  WARN 37195 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+?[0m?[0;34m2023-03-05 20:49:08.997  INFO 37195 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+?[0m?[0;34m2023-03-05 20:49:09.008  INFO 37195 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 28852 (http) with context path ''
+?[0m?[0;34m2023-03-05 20:49:09.013  INFO 37195 --- [    Test worker] rest.Main                                : Started Main in 0.63 seconds (JVM running for 15.477)
+?[0m?[1;31m
+Start test 26?[0m
+?[0;34m2023-03-05 20:49:09.019  INFO 37195 --- [io-28852-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+?[0m?[0;34m2023-03-05 20:49:09.019  INFO 37195 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+?[0m?[0;34m2023-03-05 20:49:09.020  INFO 37195 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+?[0m?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[0m?[0;34m2023-03-05 20:49:09.030  WARN 37195 --- [io-28852-exec-1] unknown.jul.logger                       : [Doctor(id=1, doctorName=director)]
+?[0m?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[0m?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[0;34m[{"id":1,"doctorName":"director"}]
+?[0m?[0;34m[{"id":10000,"doctorName":"director"}]
+?[0m?[1;31m
+Start test 27?[0m
+?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[0m?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[0;34m[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}]
+?[0m?[0;34mavailabletime
+?[0m?[0;34mbooked
+?[0m?[0;34mavailabletime
+?[0m?[0;34mbooked
+?[0m?[0;34mavailabletime
+?[0m?[0;34mbooked
+?[0m?[0;34mavailabletime
+?[0m?[0;34mbooked
+?[0m?[0;34m[director=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}]]
+?[0m?[0;34m[{"id":10000,"doctorName":"director"}]
+?[0m?[1;31m
+Start test 28?[0m
+?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[0m?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[1;31m
+Start test 29?[0m
+?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[0m?[0;34mHibernate: call next value for hibernate_sequence
+?[0m?[0;34mHibernate: insert into doctor (doctor_name, id) values (?, ?)
+?[0;34m{"id":2,"doctorName":"lea wong"}
+?[0m?[1;31m
+Start test 30?[0m
+?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[0m?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[0;34m[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}]
+?[0m?[0;34mavailabletime
+?[0m?[0;34mbooked
+?[0m?[0;34mavailabletime
+?[0m?[0;34mbooked
+?[0m?[0;34mavailabletime
+?[0m?[0;34mbooked
+?[0m?[0;34mavailabletime
+?[0m?[0;34mbooked
+?[0m?[0;34m[director=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], lea wong=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}]]
+?[0m?[0;34m[{"id":10000,"doctorName":"director"}, {"id":2,"doctorName":"lea wong"}]
+?[0m?[1;31m
+Start test 31?[0m
+?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[0m?[0;34mHibernate: call next value for hibernate_sequence
+?[0m?[0;34mHibernate: insert into doctor (doctor_name, id) values (?, ?)
+?[0;34m{"id":3,"doctorName":"pamela upperson"}
+?[0m?[1;31m
+Start test 32?[0m
+?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[1;31m
+Start test 33?[0m
+?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[0m?[0;34m2023-03-05 20:49:09.121  WARN 37195 --- [io-28852-exec-8] unknown.jul.logger                       : Pamela Upperson
+?[0m?[0;34m2023-03-05 20:49:09.121  WARN 37195 --- [io-28852-exec-8] unknown.jul.logger                       : pamela upperson
+?[0m?[0;34mHibernate: select doctor0_.id as col_0_0_ from doctor doctor0_ where doctor0_.doctor_name=? limit ?
+?[0m?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_ where doctor0_.doctor_name=?
+?[0m?[0;34mHibernate: update doctor set doctor_name=? where doctor_name=?
+?[0m?[0;34mHibernate: update appointment set doctor=? where lower(doctor)=lower(?)
+?[0m?[0;34mHibernate: select appointmen0_.id_app as id_app1_0_, appointmen0_.date as date2_0_, appointmen0_.doctor as doctor3_0_, appointmen0_.patient as patient4_0_ from appointment appointmen0_
+?[0m?[0;34m2023-03-05 20:49:09.131  WARN 37195 --- [io-28852-exec-8] unknown.jul.logger                       : []
+?[1;31m
+Start test 34?[0m
+?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[0m?[0;34m2023-03-05 20:49:09.140  WARN 37195 --- [io-28852-exec-9] unknown.jul.logger                       : [Doctor(id=1, doctorName=director), Doctor(id=2, doctorName=lea wong), Doctor(id=3, doctorName=director)]
+?[0m?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[0m?[0;34mHibernate: delete from doctor where id=?
+?[0m?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[0;34m[{"id":1,"doctorName":"director"},{"id":2,"doctorName":"lea wong"}]
+?[0m?[0;34m[{"id":10000,"doctorName":"director"}, {"id":2,"doctorName":"lea wong"}]
+?[0m?[1;31m
+Start test 35?[0m
+?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[0m?[0;34mHibernate: call next value for hibernate_sequence
+?[0m?[0;34mHibernate: insert into doctor (doctor_name, id) values (?, ?)
+?[0;34m{"id":4,"doctorName":"pamela upperson"}
+?[0m?[1;31m
+Start test 36?[0m
+?[0m?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[0m?[0;34mHibernate: call next value for hibernate_sequence
+?[0m?[0;34mHibernate: insert into doctor (doctor_name, id) values (?, ?)
+?[0;34m{"id":5,"doctorName":"phill good"}
+?[0m?[1;31m
+Start test 37?[0m
+?[0m?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[0m?[0;34m2023-03-05 20:49:09.175  WARN 37195 --- [io-28852-exec-2] unknown.jul.logger                       : [Doctor(id=1, doctorName=director), Doctor(id=2, doctorName=lea wong), Doctor(id=4, doctorName=pamela upperson), Doctor(id=5, doctorName=phill good)]
+?[0m?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[0m?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[0;34m[{"id":1,"doctorName":"director"},{"id":2,"doctorName":"lea wong"},{"id":4,"doctorName":"pamela upperson"},{"id":5,"doctorName":"phill good"}]
+?[0m?[0;34m[{"id":10000,"doctorName":"director"}, {"id":2,"doctorName":"lea wong"}, {"id":4,"doctorName":"pamela upperson"}, {"id":5,"doctorName":"phill good"}]
+?[0m?[1;31m
+Start test 38?[0m
+?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[0m?[0;34m2023-03-05 20:49:09.189  WARN 37195 --- [o-28852-exec-11] unknown.jul.logger                       : Phill good
+?[0m?[0;34m2023-03-05 20:49:09.190  WARN 37195 --- [o-28852-exec-11] unknown.jul.logger                       : phill good
+?[0m?[0;34mHibernate: select doctor0_.id as col_0_0_ from doctor doctor0_ where doctor0_.doctor_name=? limit ?
+?[0m?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_ where doctor0_.doctor_name=?
+?[0m?[0;34mHibernate: update doctor set doctor_name=? where doctor_name=?
+?[0m?[0;34mHibernate: update appointment set doctor=? where lower(doctor)=lower(?)
+?[0m?[0;34mHibernate: select appointmen0_.id_app as id_app1_0_, appointmen0_.date as date2_0_, appointmen0_.doctor as doctor3_0_, appointmen0_.patient as patient4_0_ from appointment appointmen0_
+?[0m?[0;34m2023-03-05 20:49:09.196  WARN 37195 --- [o-28852-exec-11] unknown.jul.logger                       : []
+?[1;31m
+Start test 39?[0m
+?[0m?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[1;31m
+Start test 40?[0m
+?[0m?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[0m?[0;34mHibernate: call next value for hibernate_sequence
+?[0m?[0;34mHibernate: insert into doctor (doctor_name, id) values (?, ?)
+?[0;34m{"id":6,"doctorName":"dr. house"}
+?[0m?[1;31m
+Start test 41?[0m
+?[0m?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[1;31m
+Start test 42?[0m
+?[0m?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[0m?[0;34m2023-03-05 20:49:09.233  WARN 37195 --- [io-28852-exec-9] unknown.jul.logger                       : [Doctor(id=1, doctorName=director), Doctor(id=2, doctorName=lea wong), Doctor(id=4, doctorName=pamela upperson), Doctor(id=5, doctorName=director), Doctor(id=6, doctorName=dr. house)]
+?[0m?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[0m?[0;34mHibernate: delete from doctor where id=?
+?[0m?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[0;34m[{"id":1,"doctorName":"director"},{"id":2,"doctorName":"lea wong"},{"id":4,"doctorName":"pamela upperson"},{"id":6,"doctorName":"dr. house"}]
+?[0m?[0;34m[{"id":10000,"doctorName":"director"}, {"id":2,"doctorName":"lea wong"}, {"id":4,"doctorName":"pamela upperson"}, {"id":6,"doctorName":"dr. house"}]
+?[0m?[1;31m
+Start test 43?[0m
+?[0m?[0;34mHibernate: call next value for hibernate_sequence
+?[0m?[0;34mHibernate: insert into appointment (date, doctor, patient, id_app) values (?, ?, ?, ?)
+?[0;34m2023-03-06   lea wong ay bolit
+?[0m?[0;34m[director=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], lea wong=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}]]
+?[0m?[1;31m
+Start test 44?[0m
+?[0m?[0;34mHibernate: call next value for hibernate_sequence
+?[0m?[0;34mHibernate: insert into appointment (date, doctor, patient, id_app) values (?, ?, ?, ?)
+?[0;34m2023-03-07   lea wong indi grimes
+?[0m?[0;34m[director=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], lea wong=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}]]
+?[0m?[1;31m
+Start test 45?[0m
+?[0m?[0;34mHibernate: call next value for hibernate_sequence
+?[0m?[0;34mHibernate: insert into appointment (date, doctor, patient, id_app) values (?, ?, ?, ?)
+?[0;34m2023-03-08   lea wong indi grimes
+?[0m?[0;34m[director=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], lea wong=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}]]
+?[0m?[1;31m
+Start test 46?[0m
+?[0;34m2023-03-05 20:49:09.806  INFO 37195 --- [       Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+?[0m?[0;34m2023-03-05 20:49:09.807  INFO 37195 --- [       Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+?[0m?[0;34m2023-03-05 20:49:09.825  INFO 37195 --- [       Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+?[0;34m
+?[0m?[0;34m  .   ____          _            __ _ _
+?[0m?[0;34m /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+?[0m?[0;34m( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+?[0m?[0;34m \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+?[0m?[0;34m  '  |____| .__|_| |_|_| |_\__, | / / / /
+?[0m?[0;34m =========|_|==============|___/=/_/_/_/
+?[0m?[0;34m :: Spring Boot ::                (v2.5.6)
+?[0m?[0;34m
+?[0m?[0;34m2023-03-05 20:49:19.348  INFO 37195 --- [    Test worker] rest.Main                                : Starting Main using Java 17.0.5 on 192.168.1.7 with PID 37195 (started by mahmoudxyz in /home/mahmoudxyz/IdeaProjects/Hospital Appointment Booking System/Hospital Appointment Booking System/task)
+?[0m?[0;34m2023-03-05 20:49:19.348  INFO 37195 --- [    Test worker] rest.Main                                : No active profile set, falling back to default profiles: default
+?[0m?[0;34m2023-03-05 20:49:19.517  INFO 37195 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+?[0m?[0;34m2023-03-05 20:49:19.521  INFO 37195 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 2 JPA repository interfaces.
+?[0m?[0;34m2023-03-05 20:49:19.585  INFO 37195 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 28852 (http)
+?[0m?[0;34m2023-03-05 20:49:19.586  INFO 37195 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+?[0m?[0;34m2023-03-05 20:49:19.586  INFO 37195 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+?[0m?[0;34m2023-03-05 20:49:19.596  INFO 37195 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+?[0m?[0;34m2023-03-05 20:49:19.596  INFO 37195 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 245 ms
+?[0m?[0;34m2023-03-05 20:49:19.626  INFO 37195 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+?[0m?[0;34m2023-03-05 20:49:19.630  INFO 37195 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+?[0m?[0;34m2023-03-05 20:49:19.630  INFO 37195 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:../d'
+?[0m?[0;34m2023-03-05 20:49:19.659  INFO 37195 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+?[0m?[0;34m2023-03-05 20:49:19.661  INFO 37195 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+?[0m?[0;34m2023-03-05 20:49:19.687  INFO 37195 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+?[0m?[0;34m2023-03-05 20:49:19.687  INFO 37195 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+?[0m?[0;34m2023-03-05 20:49:19.748  WARN 37195 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+?[0m?[0;34m2023-03-05 20:49:19.867  INFO 37195 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+?[0m?[0;34m2023-03-05 20:49:19.876  INFO 37195 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 28852 (http) with context path ''
+?[0m?[0;34m2023-03-05 20:49:19.880  INFO 37195 --- [    Test worker] rest.Main                                : Started Main in 0.564 seconds (JVM running for 26.345)
+?[0m?[1;31m
+Start test 47?[0m
+?[0;34m2023-03-05 20:49:19.885  INFO 37195 --- [io-28852-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+?[0m?[0;34m2023-03-05 20:49:19.886  INFO 37195 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+?[0m?[0;34m2023-03-05 20:49:19.887  INFO 37195 --- [io-28852-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+?[0m?[0;34mHibernate: select appointmen0_.id_app as id_app1_0_, appointmen0_.date as date2_0_, appointmen0_.doctor as doctor3_0_, appointmen0_.patient as patient4_0_ from appointment appointmen0_
+?[0m?[0;34mHibernate: select appointmen0_.id_app as id_app1_0_, appointmen0_.date as date2_0_, appointmen0_.doctor as doctor3_0_, appointmen0_.patient as patient4_0_ from appointment appointmen0_
+?[0;34m[{"idApp":7,"doctor":"lea wong","patient":"ay bolit","date":"2023-03-06"},{"idApp":8,"doctor":"lea wong","patient":"indi grimes","date":"2023-03-07"},{"idApp":9,"doctor":"lea wong","patient":"indi grimes","date":"2023-03-08"}]
+?[0m?[0;34m[{"idApp":7,"doctor":"lea wong","patient":"ay bolit","date":"2023-03-06"}, {"idApp":8,"doctor":"lea wong","patient":"indi grimes","date":"2023-03-07"}, {"idApp":9,"doctor":"lea wong","patient":"indi grimes","date":"2023-03-08"}]
+?[0m?[1;31m
+Start test 48?[0m
+?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[0m?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[0;34m[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}]
+?[0m?[0;34mavailabletime
+?[0m?[0;34mbooked
+?[0m?[0;34mavailabletime
+?[0m?[0;34mbooked
+?[0m?[0;34mavailabletime
+?[0m?[0;34mbooked
+?[0m?[0;34mavailabletime
+?[0m?[0;34mbooked
+?[0m?[0;34m[director=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], lea wong=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}]]
+?[0m?[0;34m[{"id":10000,"doctorName":"director"}, {"id":2,"doctorName":"lea wong"}, {"id":4,"doctorName":"pamela upperson"}, {"id":6,"doctorName":"dr. house"}]
+?[0m?[1;31m
+Start test 49?[0m
+?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[0m?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[0;34m[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}]
+?[0m?[0;34mavailabletime
+?[0m?[0;34mbooked
+?[0m?[0;34mavailabletime
+?[0m?[0;34mbooked
+?[0m?[0;34mavailabletime
+?[0m?[0;34mbooked
+?[0m?[0;34mavailabletime
+?[0m?[0;34mbooked
+?[0m?[0;34m[director=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], lea wong=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], pamela upperson=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}]]
+?[0m?[0;34m[{"id":10000,"doctorName":"director"}, {"id":2,"doctorName":"lea wong"}, {"id":4,"doctorName":"pamela upperson"}, {"id":6,"doctorName":"dr. house"}]
+?[0m?[1;31m
+Start test 50?[0m
+?[0;34mHibernate: call next value for hibernate_sequence
+?[0m?[0;34mHibernate: insert into appointment (date, doctor, patient, id_app) values (?, ?, ?, ?)
+?[0;34m2023-03-06   pamela upperson john galt
+?[0m?[0;34m[director=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], lea wong=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], pamela upperson=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}]]
+?[0m?[1;31m
+Start test 51?[0m
+?[0;34mHibernate: call next value for hibernate_sequence
+?[0m?[0;34mHibernate: insert into appointment (date, doctor, patient, id_app) values (?, ?, ?, ?)
+?[0;34m2023-03-07   pamela upperson ay
+?[0m?[0;34m[director=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], lea wong=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], pamela upperson=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}]]
+?[0m?[1;31m
+Start test 52?[0m
+?[0;34mHibernate: call next value for hibernate_sequence
+?[0m?[0;34mHibernate: insert into appointment (date, doctor, patient, id_app) values (?, ?, ?, ?)
+?[0;34m2023-03-08   pamela upperson ay
+?[0m?[0;34m[director=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], lea wong=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], pamela upperson=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}]]
+?[0m?[1;31m
+Start test 53?[0m
+?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[0m?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[0;34m[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}]
+?[0m?[0;34mavailabletime
+?[0m?[0;34mbooked
+?[0m?[0;34mavailabletime
+?[0m?[0;34mbooked
+?[0m?[0;34mavailabletime
+?[0m?[0;34mbooked
+?[0m?[0;34mavailabletime
+?[0m?[0;34mbooked
+?[0m?[0;34m[director=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], dr. house=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], lea wong=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], pamela upperson=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}]]
+?[0m?[0;34m[{"id":10000,"doctorName":"director"}, {"id":2,"doctorName":"lea wong"}, {"id":4,"doctorName":"pamela upperson"}, {"id":6,"doctorName":"dr. house"}]
+?[0m?[1;31m
+Start test 54?[0m
+?[0;34mHibernate: call next value for hibernate_sequence
+?[0m?[0;34mHibernate: insert into appointment (date, doctor, patient, id_app) values (?, ?, ?, ?)
+?[0;34m2023-03-09   lea wong indi grimes
+?[0m?[0;34m[director=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], dr. house=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], lea wong=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], pamela upperson=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}]]
+?[0m?[1;31m
+Start test 55?[0m
+?[0;34mHibernate: call next value for hibernate_sequence
+?[0m?[0;34mHibernate: insert into appointment (date, doctor, patient, id_app) values (?, ?, ?, ?)
+?[0;34m2023-03-09   pamela upperson ay
+?[0m?[0;34m[director=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], dr. house=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], lea wong=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], pamela upperson=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}]]
+?[0m?[1;31m
+Start test 56?[0m
+?[0;34mHibernate: select appointmen0_.id_app as id_app1_0_, appointmen0_.date as date2_0_, appointmen0_.doctor as doctor3_0_, appointmen0_.patient as patient4_0_ from appointment appointmen0_
+?[0m?[0;34mHibernate: select appointmen0_.id_app as id_app1_0_, appointmen0_.date as date2_0_, appointmen0_.doctor as doctor3_0_, appointmen0_.patient as patient4_0_ from appointment appointmen0_
+?[0;34m[{"idApp":7,"doctor":"lea wong","patient":"ay bolit","date":"2023-03-06"},{"idApp":8,"doctor":"lea wong","patient":"indi grimes","date":"2023-03-07"},{"idApp":9,"doctor":"lea wong","patient":"indi grimes","date":"2023-03-08"},{"idApp":10,"doctor":"pamela upperson","patient":"john galt","date":"2023-03-06"},{"idApp":11,"doctor":"pamela upperson","patient":"ay","date":"2023-03-07"},{"idApp":12,"doctor":"pamela upperson","patient":"ay","date":"2023-03-08"},{"idApp":13,"doctor":"lea wong","patient":"indi grimes","date":"2023-03-09"},{"idApp":14,"doctor":"pamela upperson","patient":"ay","date":"2023-03-09"}]
+?[0m?[0;34m[{"idApp":7,"doctor":"lea wong","patient":"ay bolit","date":"2023-03-06"}, {"idApp":8,"doctor":"lea wong","patient":"indi grimes","date":"2023-03-07"}, {"idApp":9,"doctor":"lea wong","patient":"indi grimes","date":"2023-03-08"}, {"idApp":10,"doctor":"pamela upperson","patient":"john galt","date":"2023-03-06"}, {"idApp":11,"doctor":"pamela upperson","patient":"ay","date":"2023-03-07"}, {"idApp":12,"doctor":"pamela upperson","patient":"ay","date":"2023-03-08"}, {"idApp":13,"doctor":"lea wong","patient":"indi grimes","date":"2023-03-09"}, {"idApp":14,"doctor":"pamela upperson","patient":"ay","date":"2023-03-09"}]
+?[0m?[1;31m
+Start test 57?[0m
+?[0m?[0;34mHibernate: select appointmen0_.id_app as id_app1_0_, appointmen0_.date as date2_0_, appointmen0_.doctor as doctor3_0_, appointmen0_.patient as patient4_0_ from appointment appointmen0_
+?[0;34m[{2023-03-07=2}, {2023-03-06=2}, {2023-03-09=2}, {2023-03-08=2}]
+?[0m?[0;34m{2023-03-06=2, 2023-03-07=2, 2023-03-08=2, 2023-03-09=2}
+?[0m?[0;34m{2023-03-06=2, 2023-03-07=2, 2023-03-08=2, 2023-03-09=2}
+?[0m?[1;31m
+Start test 58?[0m
+?[0m?[0;34mHibernate: select appointmen0_.id_app as id_app1_0_, appointmen0_.date as date2_0_, appointmen0_.doctor as doctor3_0_, appointmen0_.patient as patient4_0_ from appointment appointmen0_
+?[0;34m[{lea wong=4}, {pamela upperson=4}]
+?[0m?[0;34m{lea wong=4, pamela upperson=4}
+?[0m?[0;34m{lea wong=4, pamela upperson=4}
+?[0m?[1;31m
+Start test 59?[0m
+?[0m?[0;34mHibernate: select count(*) as col_0_0_ from appointment appointmen0_ where appointmen0_.id_app=?
+?[0m?[0;34mHibernate: select appointmen0_.id_app as id_app1_0_0_, appointmen0_.date as date2_0_0_, appointmen0_.doctor as doctor3_0_0_, appointmen0_.patient as patient4_0_0_ from appointment appointmen0_ where appointmen0_.id_app=?
+?[0m?[0;34mHibernate: delete from appointment where id_app=?
+?[0;34m[director=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], dr. house=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], lea wong=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], pamela upperson=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}]]
+?[0m?[0;34mHibernate: select count(*) as col_0_0_ from appointment appointmen0_ where appointmen0_.id_app=?
+?[0m?[0;34mHibernate: select appointmen0_.id_app as id_app1_0_0_, appointmen0_.date as date2_0_0_, appointmen0_.doctor as doctor3_0_0_, appointmen0_.patient as patient4_0_0_ from appointment appointmen0_ where appointmen0_.id_app=?
+?[0m?[0;34mHibernate: delete from appointment where id_app=?
+?[0m?[0;34m[director=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], dr. house=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], lea wong=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], pamela upperson=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}]]
+?[0m?[0;34mHibernate: select count(*) as col_0_0_ from appointment appointmen0_ where appointmen0_.id_app=?
+?[0m?[0;34mHibernate: select appointmen0_.id_app as id_app1_0_0_, appointmen0_.date as date2_0_0_, appointmen0_.doctor as doctor3_0_0_, appointmen0_.patient as patient4_0_0_ from appointment appointmen0_ where appointmen0_.id_app=?
+?[0m?[0;34mHibernate: delete from appointment where id_app=?
+?[0m?[0;34m[director=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], dr. house=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], lea wong=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], pamela upperson=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}]]
+?[0m?[0;34mHibernate: select count(*) as col_0_0_ from appointment appointmen0_ where appointmen0_.id_app=?
+?[0m?[0;34mHibernate: select appointmen0_.id_app as id_app1_0_0_, appointmen0_.date as date2_0_0_, appointmen0_.doctor as doctor3_0_0_, appointmen0_.patient as patient4_0_0_ from appointment appointmen0_ where appointmen0_.id_app=?
+?[0m?[0;34mHibernate: delete from appointment where id_app=?
+?[0m?[0;34m[director=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], dr. house=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], lea wong=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], pamela upperson=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}]]
+?[0m?[0;34mHibernate: select count(*) as col_0_0_ from appointment appointmen0_ where appointmen0_.id_app=?
+?[0m?[0;34mHibernate: select appointmen0_.id_app as id_app1_0_0_, appointmen0_.date as date2_0_0_, appointmen0_.doctor as doctor3_0_0_, appointmen0_.patient as patient4_0_0_ from appointment appointmen0_ where appointmen0_.id_app=?
+?[0m?[0;34mHibernate: delete from appointment where id_app=?
+?[0m?[0;34m[director=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], dr. house=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], lea wong=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], pamela upperson=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}]]
+?[0m?[0;34mHibernate: select count(*) as col_0_0_ from appointment appointmen0_ where appointmen0_.id_app=?
+?[0m?[0;34mHibernate: select appointmen0_.id_app as id_app1_0_0_, appointmen0_.date as date2_0_0_, appointmen0_.doctor as doctor3_0_0_, appointmen0_.patient as patient4_0_0_ from appointment appointmen0_ where appointmen0_.id_app=?
+?[0m?[0;34mHibernate: delete from appointment where id_app=?
+?[0m?[0;34m[director=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], dr. house=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], lea wong=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], pamela upperson=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}]]
+?[0m?[0;34mHibernate: select count(*) as col_0_0_ from appointment appointmen0_ where appointmen0_.id_app=?
+?[0m?[0;34mHibernate: select appointmen0_.id_app as id_app1_0_0_, appointmen0_.date as date2_0_0_, appointmen0_.doctor as doctor3_0_0_, appointmen0_.patient as patient4_0_0_ from appointment appointmen0_ where appointmen0_.id_app=?
+?[0m?[0;34mHibernate: delete from appointment where id_app=?
+?[0m?[0;34m[director=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], dr. house=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], lea wong=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], pamela upperson=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}]]
+?[0m?[0;34mHibernate: select count(*) as col_0_0_ from appointment appointmen0_ where appointmen0_.id_app=?
+?[0m?[0;34mHibernate: select appointmen0_.id_app as id_app1_0_0_, appointmen0_.date as date2_0_0_, appointmen0_.doctor as doctor3_0_0_, appointmen0_.patient as patient4_0_0_ from appointment appointmen0_ where appointmen0_.id_app=?
+?[0m?[0;34mHibernate: delete from appointment where id_app=?
+?[0m?[0;34m[director=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], dr. house=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], lea wong=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], pamela upperson=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}]]
+?[0m?[1;31m
+Start test 60?[0m
+?[0m?[0;34mHibernate: select appointmen0_.id_app as id_app1_0_, appointmen0_.date as date2_0_, appointmen0_.doctor as doctor3_0_, appointmen0_.patient as patient4_0_ from appointment appointmen0_
+?[0;34m
+?[0m?[1;31m
+Start test 61?[0m
+?[1;31m
+Start test 62?[0m
+?[0m?[0;34mHibernate: select count(*) as col_0_0_ from appointment appointmen0_ where appointmen0_.id_app=?
+?[1;31m
+Start test 63?[0m
+?[0m?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[0m?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[0;34m[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}]
+?[0m?[0;34mavailabletime
+?[0m?[0;34mbooked
+?[0m?[0;34mavailabletime
+?[0m?[0;34mbooked
+?[0m?[0;34mavailabletime
+?[0m?[0;34mbooked
+?[0m?[0;34mavailabletime
+?[0m?[0;34mbooked
+?[0m?[0;34m[director=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], dr. house=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], lea wong=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], pamela upperson=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}]]
+?[0m?[0;34m[{"id":10000,"doctorName":"director"}, {"id":2,"doctorName":"lea wong"}, {"id":4,"doctorName":"pamela upperson"}, {"id":6,"doctorName":"dr. house"}]
+?[0m?[1;31m
+Start test 64?[0m
+?[0m?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[0m?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[0;34m[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}]
+?[0m?[0;34mavailabletime
+?[0m?[0;34mbooked
+?[0m?[0;34mavailabletime
+?[0m?[0;34mbooked
+?[0m?[0;34mavailabletime
+?[0m?[0;34mbooked
+?[0m?[0;34mavailabletime
+?[0m?[0;34mbooked
+?[0m?[0;34m[director=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], dr. house=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], lea wong=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], pamela upperson=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}]]
+?[0m?[0;34m[{"id":10000,"doctorName":"director"}, {"id":2,"doctorName":"lea wong"}, {"id":4,"doctorName":"pamela upperson"}, {"id":6,"doctorName":"dr. house"}]
+?[0m?[1;31m
+Start test 65?[0m
+?[0m?[0;34mHibernate: call next value for hibernate_sequence
+?[0m?[0;34mHibernate: insert into appointment (date, doctor, patient, id_app) values (?, ?, ?, ?)
+?[0;34m2023-03-06   pamela upperson john galt
+?[0m?[0;34m[director=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], dr. house=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], lea wong=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], pamela upperson=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}]]
+?[0m?[1;31m
+Start test 66?[0m
+?[0m?[0;34mHibernate: call next value for hibernate_sequence
+?[0m?[0;34mHibernate: insert into appointment (date, doctor, patient, id_app) values (?, ?, ?, ?)
+?[0;34m2023-03-07   pamela upperson ay
+?[0m?[0;34m[director=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], dr. house=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], lea wong=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], pamela upperson=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}]]
+?[0m?[1;31m
+Start test 67?[0m
+?[0m?[0;34mHibernate: call next value for hibernate_sequence
+?[0m?[0;34mHibernate: insert into appointment (date, doctor, patient, id_app) values (?, ?, ?, ?)
+?[0;34m2023-03-08   pamela upperson ay
+?[0m?[0;34m[director=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], dr. house=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], lea wong=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], pamela upperson=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}]]
+?[0m?[1;31m
+Start test 68?[0m
+?[0m?[0;34mHibernate: select appointmen0_.id_app as id_app1_0_, appointmen0_.date as date2_0_, appointmen0_.doctor as doctor3_0_, appointmen0_.patient as patient4_0_ from appointment appointmen0_
+?[0;34m[{2023-03-07=1}, {2023-03-06=1}, {2023-03-08=1}]
+?[0m?[0;34m{2023-03-06=1, 2023-03-07=1, 2023-03-08=1}
+?[0m?[0;34m{2023-03-06=1, 2023-03-07=1, 2023-03-08=1}
+?[0m?[1;31m
+Start test 69?[0m
+?[0m?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[0m?[0;34m2023-03-05 20:49:20.187  WARN 37195 --- [io-28852-exec-3] unknown.jul.logger                       : Pamela Upperson
+?[0m?[0;34m2023-03-05 20:49:20.187  WARN 37195 --- [io-28852-exec-3] unknown.jul.logger                       : pamela upperson
+?[0m?[0;34mHibernate: select doctor0_.id as col_0_0_ from doctor doctor0_ where doctor0_.doctor_name=? limit ?
+?[0m?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_ where doctor0_.doctor_name=?
+?[0m?[0;34mHibernate: update doctor set doctor_name=? where doctor_name=?
+?[0m?[0;34mHibernate: update appointment set doctor=? where lower(doctor)=lower(?)
+?[0m?[0;34mHibernate: select appointmen0_.id_app as id_app1_0_, appointmen0_.date as date2_0_, appointmen0_.doctor as doctor3_0_, appointmen0_.patient as patient4_0_ from appointment appointmen0_
+?[0m?[0;34m2023-03-05 20:49:20.198  WARN 37195 --- [io-28852-exec-3] unknown.jul.logger                       : [Appointment(idApp=15, doctor=director, patient=john galt, date=2023-03-06), Appointment(idApp=16, doctor=director, patient=ay, date=2023-03-07), Appointment(idApp=17, doctor=director, patient=ay, date=2023-03-08)]
+?[1;31m
+Start test 70?[0m
+?[0m?[0;34mHibernate: select appointmen0_.id_app as id_app1_0_, appointmen0_.date as date2_0_, appointmen0_.doctor as doctor3_0_, appointmen0_.patient as patient4_0_ from appointment appointmen0_
+?[0m?[0;34mHibernate: select appointmen0_.id_app as id_app1_0_, appointmen0_.date as date2_0_, appointmen0_.doctor as doctor3_0_, appointmen0_.patient as patient4_0_ from appointment appointmen0_
+?[0;34m[{"idApp":15,"doctor":"director","patient":"john galt","date":"2023-03-06"},{"idApp":16,"doctor":"director","patient":"ay","date":"2023-03-07"},{"idApp":17,"doctor":"director","patient":"ay","date":"2023-03-08"}]
+?[0m?[0;34m[{"idApp":15,"doctor":"director","patient":"john galt","date":"2023-03-06"}, {"idApp":16,"doctor":"director","patient":"ay","date":"2023-03-07"}, {"idApp":17,"doctor":"director","patient":"ay","date":"2023-03-08"}]
+?[0m?[1;31m
+Start test 71?[0m
+?[0m?[0;34mHibernate: call next value for hibernate_sequence
+?[0m?[0;34mHibernate: insert into appointment (date, doctor, patient, id_app) values (?, ?, ?, ?)
+?[0;34m2023-03-06   lea wong ay bolit
+?[0m?[0;34m[director=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], dr. house=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], lea wong=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}]]
+?[0m?[1;31m
+Start test 72?[0m
+?[0m?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[0m?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[0;34m[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}]
+?[0m?[0;34mavailabletime
+?[0m?[0;34mbooked
+?[0m?[0;34mavailabletime
+?[0m?[0;34mbooked
+?[0m?[0;34mavailabletime
+?[0m?[0;34mbooked
+?[0m?[0;34mavailabletime
+?[0m?[0;34mbooked
+?[0m?[0;34m[director=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], dr. house=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], lea wong=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}]]
+?[0m?[0;34m[{"id":10000,"doctorName":"director"}, {"id":2,"doctorName":"lea wong"}, {"id":6,"doctorName":"dr. house"}]
+?[0m?[1;31m
+Start test 73?[0m
+?[0m?[0;34mHibernate: select appointmen0_.id_app as id_app1_0_, appointmen0_.date as date2_0_, appointmen0_.doctor as doctor3_0_, appointmen0_.patient as patient4_0_ from appointment appointmen0_
+?[0;34m[{2023-03-07=1}, {2023-03-06=2}, {2023-03-08=1}]
+?[0m?[0;34m{2023-03-06=2, 2023-03-07=1, 2023-03-08=1}
+?[0m?[0;34m{2023-03-06=2, 2023-03-07=1, 2023-03-08=1}
+?[0m?[1;31m
+Start test 74?[0m
+?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[0m?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[0;34m[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}]
+?[0m?[0;34mavailabletime
+?[0m?[0;34mbooked
+?[0m?[0;34mavailabletime
+?[0m?[0;34mbooked
+?[0m?[0;34mavailabletime
+?[0m?[0;34mbooked
+?[0m?[0;34mavailabletime
+?[0m?[0;34mbooked
+?[0m?[0;34m[director=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], dr. house=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], lea wong=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}]]
+?[0m?[0;34m[{"id":10000,"doctorName":"director"}, {"id":2,"doctorName":"lea wong"}, {"id":6,"doctorName":"dr. house"}]
+?[0m?[1;31m
+Start test 75?[0m
+?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[0m?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[1;31m
+Start test 76?[0m
+?[0m?[0;34mHibernate: select appointmen0_.id_app as id_app1_0_, appointmen0_.date as date2_0_, appointmen0_.doctor as doctor3_0_, appointmen0_.patient as patient4_0_ from appointment appointmen0_
+?[0;34m[{director=3}, {lea wong=1}]
+?[0m?[0;34m{director=3, lea wong=1}
+?[0m?[0;34m{director=3, lea wong=1}
+?[0m?[1;31m
+Start test 77?[0m
+?[1;31m
+Start test 78?[0m
+?[0m?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[1;31m
+Start test 79?[0m
+?[0m?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[0m?[0;34m2023-03-05 20:49:20.286  WARN 37195 --- [io-28852-exec-7] unknown.jul.logger                       : Lea Wong
+?[0m?[0;34m2023-03-05 20:49:20.287  WARN 37195 --- [io-28852-exec-7] unknown.jul.logger                       : lea wong
+?[0m?[0;34mHibernate: delete from doctor where id=?
+?[0m?[0;34mHibernate: select doctor0_.id as col_0_0_ from doctor doctor0_ where doctor0_.doctor_name=? limit ?
+?[0m?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_ where doctor0_.doctor_name=?
+?[0m?[0;34mHibernate: update doctor set doctor_name=? where doctor_name=?
+?[0m?[0;34mHibernate: update appointment set doctor=? where lower(doctor)=lower(?)
+?[0m?[0;34mHibernate: select appointmen0_.id_app as id_app1_0_, appointmen0_.date as date2_0_, appointmen0_.doctor as doctor3_0_, appointmen0_.patient as patient4_0_ from appointment appointmen0_
+?[0m?[0;34m2023-03-05 20:49:20.295  WARN 37195 --- [io-28852-exec-7] unknown.jul.logger                       : [Appointment(idApp=15, doctor=director, patient=john galt, date=2023-03-06), Appointment(idApp=16, doctor=director, patient=ay, date=2023-03-07), Appointment(idApp=17, doctor=director, patient=ay, date=2023-03-08), Appointment(idApp=18, doctor=director, patient=ay bolit, date=2023-03-06)]
+?[1;31m
+Start test 80?[0m
+?[0m?[0;34mHibernate: call next value for hibernate_sequence
+?[0m?[0;34mHibernate: insert into appointment (date, doctor, patient, id_app) values (?, ?, ?, ?)
+?[0;34m2023-03-09   dr. house ay
+?[0m?[0;34m[director=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], dr. house=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}]]
+?[0m?[1;31m
+Start test 81?[0m
+?[0m?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[0m?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[0;34m[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}]
+?[0m?[0;34mavailabletime
+?[0m?[0;34mbooked
+?[0m?[0;34mavailabletime
+?[0m?[0;34mbooked
+?[0m?[0;34mavailabletime
+?[0m?[0;34mbooked
+?[0m?[0;34mavailabletime
+?[0m?[0;34mbooked
+?[0m?[0;34m[director=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], dr. house=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}]]
+?[0m?[0;34m[{"id":10000,"doctorName":"director"}, {"id":6,"doctorName":"dr. house"}]
+?[0m?[1;31m
+Start test 82?[0m
+?[0m?[0;34mHibernate: select appointmen0_.id_app as id_app1_0_, appointmen0_.date as date2_0_, appointmen0_.doctor as doctor3_0_, appointmen0_.patient as patient4_0_ from appointment appointmen0_
+?[0m?[0;34mHibernate: select appointmen0_.id_app as id_app1_0_, appointmen0_.date as date2_0_, appointmen0_.doctor as doctor3_0_, appointmen0_.patient as patient4_0_ from appointment appointmen0_
+?[0;34m[{"idApp":15,"doctor":"director","patient":"john galt","date":"2023-03-06"},{"idApp":16,"doctor":"director","patient":"ay","date":"2023-03-07"},{"idApp":17,"doctor":"director","patient":"ay","date":"2023-03-08"},{"idApp":18,"doctor":"director","patient":"ay bolit","date":"2023-03-06"},{"idApp":19,"doctor":"dr. house","patient":"ay","date":"2023-03-09"}]
+?[0m?[0;34m[{"idApp":15,"doctor":"director","patient":"john galt","date":"2023-03-06"}, {"idApp":16,"doctor":"director","patient":"ay","date":"2023-03-07"}, {"idApp":17,"doctor":"director","patient":"ay","date":"2023-03-08"}, {"idApp":18,"doctor":"director","patient":"ay bolit","date":"2023-03-06"}, {"idApp":19,"doctor":"dr. house","patient":"ay","date":"2023-03-09"}]
+?[0m?[1;31m
+Start test 83?[0m
+?[0m?[0;34mHibernate: select appointmen0_.id_app as id_app1_0_, appointmen0_.date as date2_0_, appointmen0_.doctor as doctor3_0_, appointmen0_.patient as patient4_0_ from appointment appointmen0_
+?[0;34m[{2023-03-07=1}, {2023-03-06=2}, {2023-03-09=1}, {2023-03-08=1}]
+?[0m?[0;34m{2023-03-06=2, 2023-03-07=1, 2023-03-08=1, 2023-03-09=1}
+?[0m?[0;34m{2023-03-06=2, 2023-03-07=1, 2023-03-08=1, 2023-03-09=1}
+?[0m?[1;31m
+Start test 84?[0m
+?[0m?[0;34mHibernate: select appointmen0_.id_app as id_app1_0_, appointmen0_.date as date2_0_, appointmen0_.doctor as doctor3_0_, appointmen0_.patient as patient4_0_ from appointment appointmen0_
+?[0;34m[{director=4}, {dr. house=1}]
+?[0m?[0;34m{director=4, dr. house=1}
+?[0m?[0;34m{director=4, dr. house=1}
+?[0m?[1;31m
+Start test 85?[0m
+?[0m?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[0m?[0;34m2023-03-05 20:49:20.346  WARN 37195 --- [io-28852-exec-1] unknown.jul.logger                       : director
+?[0m?[0;34m2023-03-05 20:49:20.346  WARN 37195 --- [io-28852-exec-1] unknown.jul.logger                       : director
+?[0m?[0;34mHibernate: delete from doctor where id=?
+?[0m?[0;34mHibernate: select doctor0_.id as col_0_0_ from doctor doctor0_ where doctor0_.doctor_name=? limit ?
+?[0m?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_ where doctor0_.doctor_name=?
+?[0m?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_ where doctor0_.doctor_name=?
+?[0m?[0;34mHibernate: select appointmen0_.id_app as id_app1_0_, appointmen0_.date as date2_0_, appointmen0_.doctor as doctor3_0_, appointmen0_.patient as patient4_0_ from appointment appointmen0_ where appointmen0_.doctor=?
+?[0m?[0;34mHibernate: delete from doctor where id=?
+?[0m?[0;34mHibernate: delete from appointment where id_app=?
+?[0m?[0;34mHibernate: delete from appointment where id_app=?
+?[0m?[0;34mHibernate: delete from appointment where id_app=?
+?[0m?[0;34mHibernate: delete from appointment where id_app=?
+?[1;31m
+Start test 86?[0m
+?[0m?[0;34mHibernate: select appointmen0_.id_app as id_app1_0_, appointmen0_.date as date2_0_, appointmen0_.doctor as doctor3_0_, appointmen0_.patient as patient4_0_ from appointment appointmen0_
+?[0m?[0;34mHibernate: select appointmen0_.id_app as id_app1_0_, appointmen0_.date as date2_0_, appointmen0_.doctor as doctor3_0_, appointmen0_.patient as patient4_0_ from appointment appointmen0_
+?[0;34m[{"idApp":19,"doctor":"dr. house","patient":"ay","date":"2023-03-09"}]
+?[0m?[0;34m[{"idApp":19,"doctor":"dr. house","patient":"ay","date":"2023-03-09"}]
+?[0m?[1;31m
+Start test 87?[0m
+?[0m?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[0m?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[1;31m
+Start test 88?[0m
+?[0m?[0;34mHibernate: select appointmen0_.id_app as id_app1_0_, appointmen0_.date as date2_0_, appointmen0_.doctor as doctor3_0_, appointmen0_.patient as patient4_0_ from appointment appointmen0_
+?[0;34m[{dr. house=1}]
+?[0m?[0;34m{dr. house=1}
+?[0m?[0;34m{dr. house=1}
+?[0m?[1;31m
+Start test 89?[0m
+?[0m?[0;34mHibernate: select appointmen0_.id_app as id_app1_0_, appointmen0_.date as date2_0_, appointmen0_.doctor as doctor3_0_, appointmen0_.patient as patient4_0_ from appointment appointmen0_
+?[0;34m[{2023-03-09=1}]
+?[0m?[0;34m{2023-03-09=1}
+?[0m?[0;34m{2023-03-06=1, 2023-03-07=0, 2023-03-08=0, 2023-03-09=1}
+?[0m?[1;31m
+Start test 90?[0m
+?[0m?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[0m?[0;34mHibernate: call next value for hibernate_sequence
+?[0m?[0;34mHibernate: insert into doctor (doctor_name, id) values (?, ?)
+?[0;34m{"id":20,"doctorName":"director"}
+?[0m?[1;31m
+Start test 91?[0m
+?[0m?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[0m?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[0;34m[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}]
+?[0m?[0;34mavailabletime
+?[0m?[0;34mbooked
+?[0m?[0;34mavailabletime
+?[0m?[0;34mbooked
+?[0m?[0;34mavailabletime
+?[0m?[0;34mbooked
+?[0m?[0;34mavailabletime
+?[0m?[0;34mbooked
+?[0m?[0;34m[director=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}], dr. house=[{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true},{"availabletime":"2022-11-06","booked":true}]]
+?[0m?[0;34m[{"id":6,"doctorName":"dr. house"}, {"id":10000,"doctorName":"director"}, {"id":20,"doctorName":"director"}]
+?[0m?[1;31m
+Start test 92?[0m
+?[0m?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[0m?[0;34m2023-03-05 20:49:20.415  WARN 37195 --- [io-28852-exec-6] unknown.jul.logger                       : Dr. House
+?[0m?[0;34m2023-03-05 20:49:20.415  WARN 37195 --- [io-28852-exec-6] unknown.jul.logger                       : dr. house
+?[0m?[0;34mHibernate: select doctor0_.id as col_0_0_ from doctor doctor0_ where doctor0_.doctor_name=? limit ?
+?[0m?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_ where doctor0_.doctor_name=?
+?[0m?[0;34mHibernate: update doctor set doctor_name=? where doctor_name=?
+?[0m?[0;34mHibernate: update appointment set doctor=? where lower(doctor)=lower(?)
+?[0m?[0;34mHibernate: select appointmen0_.id_app as id_app1_0_, appointmen0_.date as date2_0_, appointmen0_.doctor as doctor3_0_, appointmen0_.patient as patient4_0_ from appointment appointmen0_
+?[0m?[0;34m2023-03-05 20:49:20.422  WARN 37195 --- [io-28852-exec-6] unknown.jul.logger                       : [Appointment(idApp=19, doctor=director, patient=ay, date=2023-03-09)]
+?[1;31m
+Start test 93?[0m
+?[0m?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[0m?[0;34m2023-03-05 20:49:20.431  WARN 37195 --- [io-28852-exec-3] unknown.jul.logger                       : director
+?[0m?[0;34m2023-03-05 20:49:20.431  WARN 37195 --- [io-28852-exec-3] unknown.jul.logger                       : director
+?[0m?[0;34mHibernate: delete from doctor where id=?
+?[0m?[0;34mHibernate: select doctor0_.id as col_0_0_ from doctor doctor0_ where doctor0_.doctor_name=? limit ?
+?[0m?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_ where doctor0_.doctor_name=?
+?[0m?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_ where doctor0_.doctor_name=?
+?[0m?[0;34mHibernate: select appointmen0_.id_app as id_app1_0_, appointmen0_.date as date2_0_, appointmen0_.doctor as doctor3_0_, appointmen0_.patient as patient4_0_ from appointment appointmen0_ where appointmen0_.doctor=?
+?[0m?[0;34mHibernate: delete from doctor where id=?
+?[0m?[0;34mHibernate: delete from appointment where id_app=?
+?[1;31m
+Start test 94?[0m
+?[0m?[0;34mHibernate: select doctor0_.id as id1_1_, doctor0_.doctor_name as doctor_n2_1_ from doctor doctor0_
+?[0m?[0;34m2023-03-05 20:49:20.446  WARN 37195 --- [io-28852-exec-2] unknown.jul.logger                       : director
+?[0m?[0;34m2023-03-05 20:49:20.446  WARN 37195 --- [io-28852-exec-2] unknown.jul.logger                       : director
+?[0m?[0;34mHibernate: select doctor0_.id as col_0_0_ from doctor doctor0_ where doctor0_.doctor_name=? limit ?
+?[1;31m
+Start test 95?[0m
+?[0m?[0;34mHibernate: select appointmen0_.id_app as id_app1_0_, appointmen0_.date as date2_0_, appointmen0_.doctor as doctor3_0_, appointmen0_.patient as patient4_0_ from appointment appointmen0_
+?[0;34m
+?[0m?[1;31m
+Start test 96?[0m
+?[0m?[0;34mHibernate: select appointmen0_.id_app as id_app1_0_, appointmen0_.date as date2_0_, appointmen0_.doctor as doctor3_0_, appointmen0_.patient as patient4_0_ from appointment appointmen0_
+?[0;34m
+?[0m?[1;31m
+Start test 97?[0m
+?[0m?[0;34mHibernate: select appointmen0_.id_app as id_app1_0_, appointmen0_.date as date2_0_, appointmen0_.doctor as doctor3_0_, appointmen0_.patient as patient4_0_ from appointment appointmen0_
+?[0;34m
+?[0m]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
